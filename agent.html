@@ -1,0 +1,94 @@
+<!DOCTYPE html> <!-- 声明文档类型为HTML5 -->
+<html lang="zh"> <!-- 根元素，设置页面语言为中文 -->
+<head>
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置，确保页面在移动设备上正确显示 -->
+    <title>智能体Agent介绍</title> <!-- 页面标题 -->
+    <!-- 引用外部CSS文件 -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS样式定义 */
+        body {
+            font-family: Arial, sans-serif; /* 设置页面的默认字体为无衬线字体 */
+        }
+        .container {
+            /* ... 其他样式保持不变 */
+        }
+        .title {
+            /* ... 其他样式保持不变 */
+        }
+        .content {
+            max-height: 0; /* 初始最大高度为0，内容默认不可见 */
+            overflow: hidden; /* 隐藏超出部分 */
+            transition: max-height 0.5s ease; /* 动画效果，平滑展开或收起内容 */
+        }
+        .content p {
+            padding: 10px; /* 段落的内边距 */
+        }
+        .content img {
+            max-width: 100%; /* 图片最大宽度不超过其容器宽度 */
+            height: auto; /* 高度自适应，保持图片比例 */
+            margin: 0 auto; /* 图片水平居中显示 */
+            /* display属性已移除，因为默认img是内联元素 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 页面头部，包含标题和副标题 -->
+    <header>
+        <h1>Agent智能体</h1>
+        <h2>人工智能导航-专业名词解释</h2>
+    </header>   
+    <p> Agent智能体是一个在计算机科学和人工智能领域中广泛使用的概念。 Agent是一个具有自主性、感知能力、决策能力和行动能力的智能实体，能够在特定环境中自主执行任务并达成目标。 </p>
+    <!-- 第一个下拉阅读框 -->
+    <div class="container" id="container1">
+        <div class="title" onclick="toggleContent('container1')">
+            Agent的定义 <!-- 用户点击时触发toggleContent函数 -->
+        </div>
+        <div class="content">
+            <p>Agent智能体，英文名称为Agent，是一个具有智能的实体或虚拟体。它通常被设计为能够感知环境、执行行动，并因此对环境产生影响的自主和适应性实体。Agent智能体以云为基础，以AI为核心，旨在构建一个立体感知、全域协同、精准判断、持续进化、开放的智能系统。</p> <!-- 段落文本 -->
+            <img src="image1.jpg" alt="图片1的描述"> <!-- 图片标签，放置在段落文本下方 -->
+        </div>
+    </div>
+    <!-- 第二个下拉阅读框 -->
+    <div class="container" id="container2">
+        <div class="title" onclick="toggleContent('container2')">Agent的特性</div>
+        <div class="content">
+            <p> 1.	驻留性：Agent智能体可以持续存在于某个环境中，并持续感知和响应环境的变化。
+                2.	反应性：Agent智能体能够感知环境的变化，并根据环境的变化采取相应的行动。
+                3.	社会性：Agent智能体可以与其他Agent智能体或人类进行交互和协作，以实现共同的目标。
+                4.	主动性：Agent智能体可以主动采取行动，以实现其预设的目标或响应环境的变化。
+                </p>
+            <img src="image2.jpg" alt="图片1的描述"> <!-- 图片标签移动到段落之后 -->
+        </div>
+    </div> <!-- 第三个下拉阅读框 -->
+    <div class="container" id="container3">
+        <div class="title" onclick="toggleContent('container3')">Agent的应用</div>
+        <div class="content">
+            <p>Agent智能体在多个领域都有广泛的应用，包括但不限于：
+                1.	软件开发：在软件开发中，Agent可能是一个代表应用程序处理查询并返回结果的软件。
+                2.	网络管理：在网络管理中，Agent可能是一个驻留在受管设备中，向管理站报告指定变量值的过程。
+                3.	自动化和智能化：Agent智能体可以执行各种任务，如游戏、金融决策、自然语言处理和机器翻译等，以实现自动化、智能化和高效化的任务执行。
+                </p>
+            <img src="image3.jpg" alt="图片1的描述"> <!-- 图片标签移动到段落之后 -->
+        </div>
+    </div>
+    <!-- ... -->
+
+    <!-- JavaScript脚本保持不变 -->
+    <script>
+        function toggleContent(containerId) {
+            var content = document.getElementById(containerId).querySelector('.content');
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                content.style.paddingTop = '20px';
+                content.style.paddingBottom = '20px';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                // 这里可以移除 paddingTop 和 paddingBottom 的设置，因为图片已经在文本下方
+            }
+        }
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head> <!-- 头部信息开始 -->
+    <meta charset="UTF-8"> <!-- 设置字符编码为UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 视口设置，用于响应式设计 -->
+    <title>美化的下拉阅读框页面</title> <!-- 网页标题 -->
+    <style> <!-- 内联CSS样式开始 -->
+        /* 重置部分元素的默认边距和内边距 */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+        /* 为body设置字体族、背景颜色、行高和文字颜色 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f7f7f7;
+            line-height: 1.6;
+            color: #333;
+        }
+        /* header的样式，包括背景、文字颜色和内边距 */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+        }
+        /* header内h1的样式，包括字体大小、对齐方式和颜色 */
+        header h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #fff;
+        }
+        /* header内h2的样式，包括字体大小、对齐方式和颜色 */
+        header h2 {
+            font-size: 1.5em;
+            text-align: center;
+            color: #ddd;
+        }
+        /* 容器样式，包括背景、外边距、内边距、边框圆角、阴影和宽度 */
+        .container {
+            background: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            width: 90%;
+            max-width: 600px;
+        }
+        /* 容器鼠标悬浮效果，改变阴影 */
+        .container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        /* 标题样式，包括字体大小、鼠标样式、内边距、背景、文字颜色等 */
+        .title {
+            font-size: 1.2em;
+            cursor: pointer;
+            padding: 10px;
+            background: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        /* 标题鼠标悬浮效果，改变背景颜色 */
+        .title:hover {
+            background: #0056b3;
+        }
+        /* 内容区域样式，初始最大高度为0，超出部分隐藏，平滑过渡效果 */
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+        /* 内容区域内段落和图片的样式，包括外边距 */
+        .content p, .content img {
+            margin-top: 10px;
+        }
+        /* 内容区域图片的样式，包括宽度、边框圆角和鼠标悬浮效果 */
+        .content img {
+            width: 100%;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+        }
+        .content img:hover {
+            transform: scale(1.03);
+        }
+        /* 响应式设计样式，当屏幕宽度小于768px时应用 */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header h2 {
+                font-size: 1.2em;
+            }
+            .container {
+                width: 95%;
+            }
+        }
+    </style> <!-- 内联CSS样式结束 -->
+</head> <!-- 头部信息结束 -->
+
+<body> <!-- 身体部分开始 -->
+    <header> <!-- 页面头部区域开始 -->
+        <h1>页面正标题</h1> <!-- 主标题 -->
+        <h2>页面副标题提供更多信息</h2> <!-- 副标题 -->
+    </header> <!-- 页面头部区域结束 -->
+    
+    <!-- 此处省略三个下拉窗口的HTML代码 -->
+    
+</body> <!-- 身体部分结束 -->
+</html> <!-- 根元素结束 -->
